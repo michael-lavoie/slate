@@ -158,6 +158,11 @@
       "from": "async-each-series@>=0.1.1 <0.2.0",
       "resolved": "https://registry.npmjs.org/async-each-series/-/async-each-series-0.1.1.tgz"
     },
+    "autoprefixer": {
+      "version": "6.3.6",
+      "from": "autoprefixer@>=6.3.6 <7.0.0",
+      "resolved": "https://registry.npmjs.org/autoprefixer/-/autoprefixer-6.3.6.tgz"
+    },
     "aws-sign2": {
       "version": "0.6.0",
       "from": "aws-sign2@>=0.6.0 <0.7.0",
@@ -305,6 +310,11 @@
       "from": "browser-sync-ui@>=0.5.16 <0.6.0",
       "resolved": "https://registry.npmjs.org/browser-sync-ui/-/browser-sync-ui-0.5.18.tgz"
     },
+    "browserslist": {
+      "version": "1.3.1",
+      "from": "browserslist@>=1.3.1 <1.4.0",
+      "resolved": "https://registry.npmjs.org/browserslist/-/browserslist-1.3.1.tgz"
+    },
     "bs-recipes": {
       "version": "1.1.0",
       "from": "bs-recipes@>=1.0.5 <2.0.0",
@@ -366,6 +376,11 @@
       "version": "1.0.0",
       "from": "camelcase-keys@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-1.0.0.tgz"
+    },
+    "caniuse-db": {
+      "version": "1.0.30000452",
+      "from": "caniuse-db@>=1.0.30000444 <2.0.0",
+      "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000452.tgz"
     },
     "capture-stack-trace": {
       "version": "1.0.0",
@@ -1161,6 +1176,7 @@
       "from": "error-ex@>=1.2.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz"
     },
+<<<<<<< e1d09c383cef62e8a6da15ab37c9fbf728658ae2
     "es5-ext": {
       "version": "0.10.11",
       "from": "es5-ext@>=0.10.8 <0.11.0",
@@ -2540,6 +2556,7 @@
               "version": "4.0.1",
               "from": "xtend@4.0.1",
               "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz"
+<<<<<<< e1d09c383cef62e8a6da15ab37c9fbf728658ae2
             }
           }
         },
@@ -2822,6 +2839,11 @@
       "version": "1.1.0",
       "from": "gulp-plumber@>=1.1.0 <1.2.0",
       "resolved": "https://registry.npmjs.org/gulp-plumber/-/gulp-plumber-1.1.0.tgz"
+    },
+    "gulp-postcss": {
+      "version": "6.1.0",
+      "from": "gulp-postcss@>=6.1.0 <7.0.0",
+      "resolved": "https://registry.npmjs.org/gulp-postcss/-/gulp-postcss-6.1.0.tgz"
     },
     "gulp-rename": {
       "version": "1.2.2",
@@ -3143,6 +3165,11 @@
       "version": "1.0.3",
       "from": "has-cors@1.0.3",
       "resolved": "https://registry.npmjs.org/has-cors/-/has-cors-1.0.3.tgz"
+    },
+    "has-flag": {
+      "version": "1.0.0",
+      "from": "has-flag@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-1.0.0.tgz"
     },
     "has-gulplog": {
       "version": "0.1.0",
@@ -3646,6 +3673,11 @@
       "version": "3.0.6",
       "from": "jpegtran-bin@>=3.0.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/jpegtran-bin/-/jpegtran-bin-3.0.6.tgz"
+    },
+    "js-base64": {
+      "version": "2.1.9",
+      "from": "js-base64@>=2.1.9 <3.0.0",
+      "resolved": "https://registry.npmjs.org/js-base64/-/js-base64-2.1.9.tgz"
     },
     "js-beautify": {
       "version": "1.4.2",
@@ -4269,10 +4301,20 @@
       "from": "normalize-path@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/normalize-path/-/normalize-path-2.0.1.tgz"
     },
+    "normalize-range": {
+      "version": "0.1.2",
+      "from": "normalize-range@>=0.1.2 <0.2.0",
+      "resolved": "https://registry.npmjs.org/normalize-range/-/normalize-range-0.1.2.tgz"
+    },
     "nth-check": {
       "version": "1.0.1",
       "from": "nth-check@>=1.0.1 <1.1.0",
       "resolved": "https://registry.npmjs.org/nth-check/-/nth-check-1.0.1.tgz"
+    },
+    "num2fraction": {
+      "version": "1.2.2",
+      "from": "num2fraction@>=1.2.2 <2.0.0",
+      "resolved": "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz"
     },
     "number-is-nan": {
       "version": "1.0.0",
@@ -4583,6 +4625,62 @@
           "resolved": "https://registry.npmjs.org/async/-/async-0.1.15.tgz"
         }
       }
+    },
+    "postcss": {
+      "version": "5.0.19",
+      "from": "postcss@>=5.0.19 <6.0.0",
+      "resolved": "https://registry.npmjs.org/postcss/-/postcss-5.0.19.tgz",
+      "dependencies": {
+        "source-map": {
+          "version": "0.5.3",
+          "from": "source-map@>=0.5.1 <0.6.0",
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.3.tgz"
+        },
+        "supports-color": {
+          "version": "3.1.2",
+          "from": "supports-color@>=3.1.2 <4.0.0",
+          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-3.1.2.tgz"
+        }
+      }
+    },
+    "postcss-import": {
+      "version": "8.1.0",
+      "from": "postcss-import@>=8.1.0 <9.0.0",
+      "resolved": "https://registry.npmjs.org/postcss-import/-/postcss-import-8.1.0.tgz",
+      "dependencies": {
+        "object-assign": {
+          "version": "4.0.1",
+          "from": "object-assign@>=4.0.1 <5.0.0",
+          "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.0.1.tgz"
+        }
+      }
+    },
+    "postcss-scss": {
+      "version": "0.1.7",
+      "from": "postcss-scss@>=0.1.7 <0.2.0",
+      "resolved": "https://registry.npmjs.org/postcss-scss/-/postcss-scss-0.1.7.tgz"
+    },
+    "postcss-shopify-settings-variables": {
+      "version": "0.1.4",
+      "from": "postcss-shopify-settings-variables@>=0.1.4 <0.2.0",
+      "resolved": "https://registry.npmjs.org/postcss-shopify-settings-variables/-/postcss-shopify-settings-variables-0.1.4.tgz",
+      "dependencies": {
+        "postcss": {
+          "version": "4.1.16",
+          "from": "postcss@>=4.1.13 <5.0.0",
+          "resolved": "https://registry.npmjs.org/postcss/-/postcss-4.1.16.tgz"
+        },
+        "source-map": {
+          "version": "0.4.4",
+          "from": "source-map@>=0.4.2 <0.5.0",
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.4.4.tgz"
+        }
+      }
+    },
+    "postcss-value-parser": {
+      "version": "3.3.0",
+      "from": "postcss-value-parser@>=3.2.3 <4.0.0",
+      "resolved": "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz"
     },
     "prelude-ls": {
       "version": "1.1.2",

@@ -1,5 +1,9 @@
 var gulp = require('gulp');
-var cssimport = require('gulp-cssimport');
+var postcss = require('gulp-postcss');
+var postcss_import = require('postcss-import');
+var scss_syntax = require('postcss-scss');
+var postcss_shopify_variables = require('postcss-shopify-settings-variables');
+var autoprefixer = require('autoprefixer');
 var plumber = require('gulp-plumber');
 var chokidar = require('chokidar');
 
@@ -9,7 +13,7 @@ var messages = require('./reqs/messages.js');
 
 
 /**
- * Concatenate scss via gulp-cssimport
+ * Concatenate and autoprefix scss with PostCSS
  *
  * @function build:scss
  * @memberof slate-cli.tasks.build
@@ -36,8 +40,13 @@ gulp.task('watch:scss', ['build:scss-lint'], function() {
 
 function processScss() {
   messages.logProcessFiles('build:scss', config.paths.parentIncludeScss);
+  var processors = [
+    postcss_import,
+    autoprefixer,
+    postcss_shopify_variables
+  ]
   return gulp.src(config.paths.parentIncludeScss)
     .pipe(plumber(utils.errorHandler))
-    .pipe(cssimport())
+    .pipe(postcss(processors, {syntax: scss_syntax}))
     .pipe(gulp.dest(config.paths.destAssets));
 }

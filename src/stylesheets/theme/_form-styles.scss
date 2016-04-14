@@ -27,10 +27,10 @@ textarea {
 
 /*================ Custom select style ================*/
 select {
-  @include prefix(appearance, none, webkit moz spec);
+  appearance: none;
   background-position: right center;
   background: {
-    image: url($svg-select-icon);
+    image: url('ico-select.svg');
     repeat: no-repeat;
     position: right 10px center;
     color: transparent;

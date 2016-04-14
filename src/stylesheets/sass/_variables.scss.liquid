@@ -39,10 +39,10 @@ $breakpoint-has-widths: ($small, $medium-up);
 $breakpoint-has-push: ();
 
 /*================ Color Variables ================*/
-$color-primary: {{ settings.color_primary }};
+$color-primary: $(settings.color_primary | default: '#000');
 
 // Text colors
-$color-body-text: {{ settings.color_body_text }};
+$color-body-text: $(settings.color_body_text | default: '#000');
 
 // Backgrounds
 $color-body: #fff;
@@ -61,7 +61,7 @@ $color-success-bg: #000;
 /*================ Sizing Variables ================*/
 $width-site: 1180px;
 $gutter: 30px;
-$logo-max-width: {{ settings.logo_max_width | default: '450' | remove: 'px' | append: 'px'}};
+$logo-max-width: $(settings.logo_max_width | default: '450' | remove: 'px' | append: 'px');
 
 /*================ Typography Variables ================*/
 $font-weight-normal: 400;
@@ -71,11 +71,8 @@ $font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-se
 $font-weight-header: $font-weight-bold;
 
 $font-stack-body: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-size-base: {{ settings.type_base_size }}; // Henseforth known as 1em
+$font-size-base: $(settings.type_base_size | default: '16px'); // Henseforth known as 1em
 
 /*================ Z-Index ================*/
 $z-index-dropdown : 2;
 $z-index-skip-to-content: 10000; // really high to be safe of app markup
-
-/*================ SVG ================*/
-$svg-select-icon: #{'{{ "ico-select.svg" | asset_url }}'};
