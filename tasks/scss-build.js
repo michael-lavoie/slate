@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var postcss_import = require('postcss-import');
 var scss_syntax = require('postcss-scss');
+var safe = require('postcss-safe-parser');
 var autoprefixer = require('autoprefixer');
 var plumber = require('gulp-plumber');
 var chokidar = require('chokidar');
@@ -45,6 +46,8 @@ function processScss() {
   ]
   return gulp.src(config.paths.parentIncludeScss)
     .pipe(plumber(utils.errorHandler))
-    .pipe(postcss(processors, { syntax: scss_syntax }))
+    .pipe(
+      postcss(processors, { syntax: scss_syntax, parser: safe })
+    )
     .pipe(gulp.dest(config.paths.destAssets));
 }
