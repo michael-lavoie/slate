@@ -30,7 +30,7 @@ select {
   appearance: none;
   background-position: right center;
   background: {
-    image: url('ico-select.svg');
+    image: url($svg-select-icon);
     repeat: no-repeat;
     position: right 10px center;
     color: transparent;

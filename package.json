@@ -34,7 +34,6 @@
     "open": "0.0.5",
     "postcss-import": "8.1.0",
     "postcss-scss": "0.1.7",
-    "postcss-shopify-settings-variables": "0.1.4",
     "require-dir": "0.3.0",
     "run-sequence": "1.1.5",
     "vinyl-paths": "2.1.0",
