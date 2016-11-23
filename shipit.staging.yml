@@ -1,0 +1,8 @@
+deploy:
+  override:
+    - npm install --no-progress
+    - npm install @shopify/slate --no-progress
+    - ./node_modules/.bin/slate zip
+    - ejson decrypt -o secrets.json secrets.staging.ejson
+    - node scripts/build-src
+    - node scripts/deploy
