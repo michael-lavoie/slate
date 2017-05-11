@@ -29,8 +29,6 @@ theme.Product = (function() {
    */
   function Product(container) {
     this.$container = $(container);
-    var sectionId = this.$container.attr('data-section-id');
-
     this.settings = {};
     this.namespace = '.product';
 
