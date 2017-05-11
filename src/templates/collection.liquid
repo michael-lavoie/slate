@@ -44,6 +44,9 @@
               {{ 'products.product.on_sale' | t }}
               {{ product.price | money }}
             {% endif %}
+            
+            <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+            <s>{{ product.compare_at_price | money }}</s>
 
           {% else %}
 
@@ -54,11 +57,6 @@
               {{ product.price | money }}
             {% endif %}
 
-          {% endif %}
-
-          {% if product.compare_at_price > product.price %}
-            <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-            <s>{{ product.compare_at_price | money }}</s>
           {% endif %}
 
           {% unless product.available %}
