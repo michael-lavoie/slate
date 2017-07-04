@@ -7,55 +7,55 @@
  */
 
 theme.customerLogin = (function() {
-  var config = {
-    recoverPasswordForm: '#RecoverPassword',
-    hideRecoverPasswordLink: '#HideRecoverPasswordLink'
-  };
+	var config = {
+		recoverPasswordForm: '#RecoverPassword',
+		hideRecoverPasswordLink: '#HideRecoverPasswordLink'
+	};
 
-  if (!$(config.recoverPasswordForm).length) {
-    return;
-  }
+	if (!$(config.recoverPasswordForm).length) {
+		return;
+	}
 
-  checkUrlHash();
-  resetPasswordSuccess();
+	checkUrlHash();
+	resetPasswordSuccess();
 
-  $(config.recoverPasswordForm).on('click', onShowHidePasswordForm);
-  $(config.hideRecoverPasswordLink).on('click', onShowHidePasswordForm);
+	$(config.recoverPasswordForm).on('click', onShowHidePasswordForm);
+	$(config.hideRecoverPasswordLink).on('click', onShowHidePasswordForm);
 
-  function onShowHidePasswordForm(evt) {
-    evt.preventDefault();
-    toggleRecoverPasswordForm();
-  }
+	function onShowHidePasswordForm(evt) {
+		evt.preventDefault();
+		toggleRecoverPasswordForm();
+	}
 
-  function checkUrlHash() {
-    var hash = window.location.hash;
+	function checkUrlHash() {
+		var hash = window.location.hash;
 
-    // Allow deep linking to recover password form
-    if (hash === '#recover') {
-      toggleRecoverPasswordForm();
-    }
-  }
+		// Allow deep linking to recover password form
+		if (hash === '#recover') {
+			toggleRecoverPasswordForm();
+		}
+	}
 
-  /**
-   *  Show/Hide recover password form
-   */
-  function toggleRecoverPasswordForm() {
-    $('#RecoverPasswordForm').toggleClass('hide');
-    $('#CustomerLoginForm').toggleClass('hide');
-  }
+	/**
+	 *  Show/Hide recover password form
+	 */
+	function toggleRecoverPasswordForm() {
+		$('#RecoverPasswordForm').toggleClass('hide');
+		$('#CustomerLoginForm').toggleClass('hide');
+	}
 
-  /**
-   *  Show reset password success message
-   */
-  function resetPasswordSuccess() {
-    var $formState = $('.reset-password-success');
+	/**
+	 *  Show reset password success message
+	 */
+	function resetPasswordSuccess() {
+		var $formState = $('.reset-password-success');
 
-    // check if reset password form was successfully submited.
-    if (!$formState.length) {
-      return;
-    }
+		// check if reset password form was successfully submited.
+		if (!$formState.length) {
+			return;
+		}
 
-    // show success message
-    $('#ResetSuccess').removeClass('hide');
-  }
+		// show success message
+		$('#ResetSuccess').removeClass('hide');
+	}
 })();

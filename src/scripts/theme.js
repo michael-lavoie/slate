@@ -19,22 +19,22 @@ window.theme = window.theme || {};
 // =require templates/customers-login.js
 
 $(document).ready(function() {
-  var sections = new slate.Sections();
-  sections.register('product', theme.Product);
+	var sections = new slate.Sections();
+	sections.register('product', theme.Product);
 
-  // Common a11y fixes
-  slate.a11y.pageLinkFocus($(window.location.hash));
+	// Common a11y fixes
+	slate.a11y.pageLinkFocus($(window.location.hash));
 
-  $('.in-page-link').on('click', function(evt) {
-    slate.a11y.pageLinkFocus($(evt.currentTarget.hash));
-  });
+	$('.in-page-link').on('click', function(evt) {
+		slate.a11y.pageLinkFocus($(evt.currentTarget.hash));
+	});
 
-  // Wrap videos in div to force responsive layout.
-  slate.rte.wrapTable();
-  slate.rte.iframeReset();
+	// Wrap videos in div to force responsive layout.
+	slate.rte.wrapTable();
+	slate.rte.iframeReset();
 
-  // Apply a specific class to the html element for browser support of cookies.
-  if (slate.cart.cookiesEnabled()) {
-    document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
-  }
+	// Apply a specific class to the html element for browser support of cookies.
+	if (slate.cart.cookiesEnabled()) {
+		document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
+	}
 });
